@@ -1,0 +1,485 @@
+[
+  {
+    "id": "jabra-panacast-50",
+    "slug": "jabra-panacast-50",
+    "model": "Jabra PanaCast 50",
+    "title": "Jabra PanaCast 50 (BYOD Akıllı Video Bar)",
+    "category": "panacast",
+    "categoryName": "Video Konferans & Oda Sistemleri",
+    "subcategory": "Akıllı Video Bar (BYOD)",
+    "sites": [
+      "jabrapanacast.com.tr",
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "180° Panoramik-4K görüntü, 8 mikrofonlu stüdyo kalitesinde ses, Dynamic Composition ve Canlı Beyaz Tahta paylaşımı sunan ödüllü akıllı video bar.",
+    "fullDescription": "Jabra PanaCast 50, toplantı odalarını modern hibrit çalışma alanlarına dönüştürür. Üç adet 13 megapiksel kamera ve patentli gerçek zamanlı video birleştirme teknolojisi sayesinde kör nokta bırakmadan 180° kapsama sağlar. Dahili 9 Edge AI işlemcisi, Virtual Director ve Dynamic Composition özellikleri ile aktif konuşmacıyı akıllıca odaklar.",
+    "specs": {
+      "Kamera ve Çözünürlük": "3x 13MP Kamera ile 180° Panoramik-4K (3840x1080 @ 30fps)",
+      "Görüş Açısı": "Yatay: 180°, Dikey: 54°",
+      "Yapay Zeka Özellikleri": "Dynamic Composition, Virtual Director, Intelligent Zoom, Canlı Beyaz Tahta",
+      "Ses & Hoparlör": "4 adet sıfır titreşimli stereo hoparlör (2x 50mm woofer, 2x 20mm tweeter)",
+      "Mikrofon": "8 Beamforming hassas mikrofon dizilimi, yankı ve gürültü engelleme",
+      "Bağlantı": "USB-C, USB-A tak-çalıştır, Ethernet (RJ45)",
+      "Sertifikalar": "Microsoft Teams, Microsoft Teams Rooms, Zoom, Zoom Rooms"
+    },
+    "features": [
+      "180° Panoramik-4K gerçek zamanlı video birleştirme (Stitching)",
+      "Dynamic Composition ile son 4 konuşmacıya yakın plan akıllı bölünmüş ekran",
+      "Virtual Director ile ses ve yüz takibi yaparak konuşmacıyı otomatik kadraja alma",
+      "Canlı Beyaz Tahta (Whiteboard) çift video akışı ile eş zamanlı tahta paylaşımı",
+      "Anonim kişi sayımı ve oda doluluk kapasitesi uyarısı"
+    ],
+    "imageUrl": "https://assets2.jabra.com/1/4/2/f/142fdb59906cebf07c63b2312f7710001bebf25e_Jabra_PanaCast50_table_stand_grey_02.png",
+    "officialUrl": "https://www.jabra.com/en-gb/business/video-conferencing/jabra-panacast-50",
+    "datasheetUrl": "https://www.jabra.com/_/media/Jabra_VXi_Product-Documentation/Jabra-PanaCast-50/Datasheets/RevB/EN-Jabra-Panacast-50-Datasheet-A4-210421.pdf",
+    "roomSize": "Orta Oda (6-10 Kişi)",
+    "badge": "En Çok Tercih Edilen Video Bar"
+  },
+  {
+    "id": "jabra-panacast-50-vbs",
+    "slug": "jabra-panacast-50-vbs",
+    "model": "Jabra PanaCast 50 Video Bar System (VBS)",
+    "title": "Jabra PanaCast 50 Video Bar System (Android + PanaCast Control)",
+    "category": "panacast",
+    "categoryName": "Video Konferans & Oda Sistemleri",
+    "subcategory": "All-in-One Android Oda Sistemleri",
+    "sites": [
+      "jabrapanacast.com.tr",
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "Dahili Android işlemcili 180° Panoramik-4K akıllı video bar ve 10.1 inç dokunmatik PanaCast Control masa tabletinden oluşan hepsi-bir-arada toplantı odası sistemi.",
+    "fullDescription": "Harici bilgisayara gerek duymadan doğrudan Microsoft Teams Rooms on Android ve Zoom Rooms çalıştıran PanaCast 50 VBS, toplantıları tek dokunuşla başlatmanızı sağlar. Güçlü Qualcomm sistem çipleri ve Android işletim sistemiyle güvenli ve merkezi yönetilebilir.",
+    "specs": {
+      "İşletim Sistemi": "Android tabanlı bağımsız oda mimarisi",
+      "Kamera": "3x 13MP Kamera ile 180° Panoramik-4K (3840x1080)",
+      "Kontrol Tableti": "10.1 inç HD Dokunmatik PanaCast Control (PoE beslemeli, tek kablo)",
+      "Ses & Mikrofon": "8 Beamforming Mikrofon + 4 Titreşimsiz Hoparlör",
+      "Bağlantı & Ağ": "Wi-Fi, Bluetooth, 2x Ethernet Gigabit PoE, HDMI Çıkış (Çift Ekran desteği)",
+      "Sertifikalar": "Microsoft Teams Rooms on Android, Zoom Rooms"
+    },
+    "features": [
+      "Bilgisayarsız Tek Dokunuşla Toplantı Başlatma (One-Touch Join)",
+      "10.1\" PanaCast Control dokunmatik masa paneli kutuya dahildir",
+      "Çift ekran (Dual Display) HDMI çıkışı ile içerik ve katılımcıları ayırma",
+      "Sıfır kablo karmaşası: PoE üzerinden tek ethernet kablosuyla güç ve veri",
+      "Jabra+ ve Teams Admin Center üzerinden uzaktan filo yönetimi"
+    ],
+    "imageUrl": "https://assets2.jabra.com/8/c/4/b/8c4baf973599ca7670ac432ac06a9d9b51ed436b_jabra_panacast_50_video_bar_system.png",
+    "officialUrl": "https://www.jabra.com/business/video-conferencing/jabra-panacast-50-video-bar-system",
+    "datasheetUrl": "https://www.jabra.com/_/media/Jabra_VXi_Product-Documentation/Jabra-PanaCast-50-VBS/Datasheets/RevA/EN-Jabra-Panacast-50-VBS-Datasheet.pdf",
+    "roomSize": "Orta & Büyük Oda (6-12 Kişi)",
+    "badge": "Hepsi-Bir-Arada Android"
+  },
+  {
+    "id": "jabra-panacast-50-room-system",
+    "slug": "jabra-panacast-50-room-system",
+    "model": "Jabra PanaCast 50 Room System",
+    "title": "Jabra PanaCast 50 Room System (Windows & Lenovo ThinkSmart)",
+    "category": "panacast",
+    "categoryName": "Video Konferans & Oda Sistemleri",
+    "subcategory": "Windows Tabanlı Tam Oda Sistemleri",
+    "sites": [
+      "jabrapanacast.com.tr",
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "PanaCast 50 Video Bar, Lenovo ThinkSmart Core Windows işlemci ünitesi ve 10.1 inç ThinkSmart Controller dokunmatik panelden oluşan kurumsal Windows oda çözümü.",
+    "fullDescription": "Windows altyapısını tercih eden kurumsal IT departmanları için Lenovo iş birliğiyle sunulan anahtar teslim oda sistemi. Intel vPro işlemcili ThinkSmart Core ve Microsoft Teams Rooms on Windows ile 10 kişiye kadar katılımcıyı sesinden tanıyan Intelligent Speaker özelliğini destekler.",
+    "specs": {
+      "İşlemci Ünitesi": "Lenovo ThinkSmart Core (Intel Core vPro, Windows 11 IoT Enterprise SAC)",
+      "Dokunmatik Panel": "10.1 inç Full HD ThinkSmart Controller Dokunmatik Ekran",
+      "Video Bar": "Jabra PanaCast 50 (180° Panoramik 4K, 8 Mikrofon, 4 Hoparlör)",
+      "Özel Yetenek": "Microsoft Teams Intelligent Speaker (10 kişiye kadar sesli katip & kimlik tanıma)",
+      "Yönetim": "Lenovo ThinkSmart Manager & Jabra+ Cloud Platform"
+    },
+    "features": [
+      "Microsoft Teams Rooms on Windows ve Zoom Rooms sertifikalı",
+      "Intelligent Speaker ile toplantı tutanaklarında konuşmacı isimlerini otomatik ayrıştırma",
+      "ThinkSmart Core endüstriyel dayanıklı mini PC kutusu",
+      "Ultra güvenli kurumsal Windows 11 IoT Enterprise mimarisi",
+      "Kapsamlı oda entegrasyonu ve kablo kilitleme mekanizması"
+    ],
+    "imageUrl": "https://assets2.jabra.com/4/c/a/1/4ca17c389237d27f6781486803fd21fe86babdb2_Jabra_PanaCast50VBS_01.png",
+    "officialUrl": "https://www.jabra.com/en-in/business/video-conferencing/jabra-panacast-50-room-system",
+    "datasheetUrl": "https://www.jabra.com/_/media/Jabra_VXi_Product-Documentation/Jabra-PanaCast-50-Room-System/Datasheets/RevC/EN-Jabra-Panacast-50-Room-System-060225_WEB.pdf",
+    "roomSize": "Büyük / Yönetim Kurulu Odası (10+ Kişi)",
+    "badge": "Windows & MTR On Windows"
+  },
+  {
+    "id": "jabra-panacast-40-vbs",
+    "slug": "jabra-panacast-40-vbs",
+    "model": "Jabra PanaCast 40 VBS",
+    "title": "Jabra PanaCast 40 Video Bar System (Huddle Rooms)",
+    "category": "panacast",
+    "categoryName": "Video Konferans & Oda Sistemleri",
+    "subcategory": "Kompakt Video Bar Sistemi",
+    "sites": [
+      "jabrapanacast.com.tr",
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "Küçük toplantı odaları ve odak alanları (Huddle Rooms) için tasarlanmış kompakt, hepsi-bir-arada akıllı video konferans çubuğu.",
+    "fullDescription": "Küçük odalarda yer tasarrufu sağlayan PanaCast 40 VBS, hızlı kurulum ve sıfır bakım gereksinimiyle kurumların huddle room alanlarını standartlaştırmasını sağlar. Yüksek kaliteli geniş açılı kamera ve akıllı ses algoritmalarıyla küçük ekiplere büyük toplantı deneyimi yaşatır.",
+    "specs": {
+      "Görüş Açısı": "Geniş Açılı 4K Ultra HD Optik Sistem",
+      "İşletim Mimarisi": "Android Tabanlı Huddle Room Sistemi + Dokunmatik Kontrol",
+      "Ses & Mikrofon": "Yüksek verimli tümleşik hoparlör ve beamforming mikrofonlar",
+      "Oda Tipi": "Odak Odası / Huddle Room (2-5 Kişi)",
+      "Montaj": "Ekran üstü, ekran altı veya duvar montaj"
+    },
+    "features": [
+      "Hızlı tak-çalıştır ve düşük güç tüketimi",
+      "Küçük odalarda duvardan duvara net görüş",
+      "Arka plan gürültülerini filtreleyen akıllı ses mimarisi",
+      "Microsoft Teams Rooms & Zoom sertifikası"
+    ],
+    "imageUrl": "https://assets2.jabra.com/3/e/f/f/3effb4227189ad803cb3160caeb47258a57dfa91_Jabra_PanaCast_40vbs_techspec3.png",
+    "officialUrl": "https://www.jabra.com/business/video-conferencing/jabra-panacast-40-vbs",
+    "datasheetUrl": "https://www.jabra.com/_/media/Jabra_VXi_Product-Documentation/Jabra-PanaCast-40-VBS/Guides/Admin-Guide/RevA/Jabra-Panacast-40-VBS_Administrator-Guide_RevA8.pdf",
+    "roomSize": "Küçük Oda / Huddle (2-6 Kişi)",
+    "badge": "Kompakt Huddle Çözümü"
+  },
+  {
+    "id": "jabra-panacast-20",
+    "slug": "jabra-panacast-20",
+    "model": "Jabra PanaCast 20",
+    "title": "Jabra PanaCast 20 Kişisel 4K AI Video Kamera",
+    "category": "panacast",
+    "categoryName": "Video Konferans & Oda Sistemleri",
+    "subcategory": "Kişisel 4K AI Kameralar",
+    "sites": [
+      "jabrapanacast.com.tr",
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "Cihaz içi Edge AI işlemcisiyle Akıllı Işık Optimizasyonu, Akıllı Yakınlaştırma ve Resim İçinde Resim sunan 4K Ultra HD kişisel video konferans kamerası.",
+    "fullDescription": "Jabra PanaCast 20, yöneticiler, hibrit çalışanlar ve profesyoneller için sınıfının en gelişmiş kişisel web kamerasıdır. Görüntüyü bilgisayarın CPU'sunu yormadan cihaz içi yapay zeka çipiyle işler, karanlık ortamlarda ışığı dengeler ve entegre lens kapağıyla tam gizlilik sunar.",
+    "specs": {
+      "Sensör ve Çözünürlük": "13 Megapiksel 4K Ultra HD (3840x2160 @ 30fps)",
+      "Yapay Zeka": "Edge AI İşlemci (Intelligent Zoom, Akıllı Işık Optimizasyonu)",
+      "Gizlilik": "Entegre Mekanik Lens Gizlilik Sürgüsü (Privacy Cover)",
+      "Resim İçinde Resim": "Picture-in-Picture (PiP) ikinci odak penceresi",
+      "Mikrofon": "3 Dahili Çok Yönlü MEMS Mikrofon",
+      "Bağlantı": "USB-C 3.0 Tak-Çalıştır, Dayanıklı Taşıma Kılıfı"
+    },
+    "features": [
+      "4K Ultra HD kişisel görüntü kalitesi",
+      "Cihaz içi Akıllı Yakınlaştırma (Intelligent Zoom) ile sürekli merkezde kalma",
+      "Akıllı Işık Optimizasyonu (Kötü aydınlatmalı ev veya ofislerde kusursuz yüz aydınlatması)",
+      "Fiziksel gizlilik kapağı ile saniyeler içinde görüntüyü kapatma",
+      "Kompakt ve taşınabilir klipsli tasarım"
+    ],
+    "imageUrl": "https://assets2.jabra.com/5/e/5/7/5e5780d2896b17079bdfa776b4df15c945d39a79_Jabra_PanaCast20_00s.png",
+    "officialUrl": "https://www.jabra.com/business/video-conferencing/jabra-panacast-20",
+    "datasheetUrl": "https://www.jabra.com/_/media/Jabra_VXi_Product-Documentation/Jabra-PanaCast-20/Technical-specifications/RevB/EN-US-Jabra-PanaCast-20-Tech-Specs-030222.pdf",
+    "roomSize": "Kişisel / Yönetici Masası (1 Kişi)",
+    "badge": "4K Edge AI Kişisel Kamera"
+  },
+  {
+    "id": "jabra-panacast-original",
+    "slug": "jabra-panacast-original",
+    "model": "Jabra PanaCast",
+    "title": "Jabra PanaCast (180° Panoramik 4K Kompakt Kamera)",
+    "category": "panacast",
+    "categoryName": "Video Konferans & Oda Sistemleri",
+    "subcategory": "180° USB Kameralar",
+    "sites": [
+      "jabrapanacast.com.tr",
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "Patentli 3 kameralı 180° Panoramik-4K tak-çalıştır USB video konferans kamerası.",
+    "fullDescription": "Dünyanın ilk akıllı 180° panoramik tak-çalıştır video çözümü. Küçük odalarda duvara sıfır yerleşim sağlayan tasarımıyla hiçbir katılımcıyı dışarıda bırakmaz.",
+    "specs": {
+      "Kamera": "3x 13MP Kamera ile 180° Panoramik-4K",
+      "Görüş Açısı": "Yatay 180°, Dikey 54°",
+      "Bağlantı": "USB-C Tak-Çalıştır",
+      "Mikrofon": "2 dahili mikrofon",
+      "Yazılım Uyumu": "Jabra Direct & Jabra Xpress"
+    },
+    "features": [
+      "Gerçek 180° kör noktasız toplantı odası görüntüsü",
+      "Hafif ve son derece taşınabilir gövde",
+      "Akıllı Yakınlaştırma (Intelligent Zoom) desteği",
+      "Teams ve Zoom sertifikalı"
+    ],
+    "imageUrl": "https://assets2.jabra.com/2/2/7/e/227ec632fb5e3661b588bec6b832f72367acf4f1_01_PanaCast_New.png",
+    "officialUrl": "https://www.jabra.com/supportpages/jabra-panacast",
+    "roomSize": "Huddle Room (2-6 Kişi)",
+    "badge": "180° Kompakt Efsane"
+  },
+  {
+    "id": "jabra-panacast-meet-anywhere",
+    "slug": "jabra-panacast-meet-anywhere",
+    "model": "Jabra PanaCast Meet Anywhere / Meet Anywhere+",
+    "title": "Jabra PanaCast Meet Anywhere Taşınabilir Konferans Paketleri",
+    "category": "panacast",
+    "categoryName": "Video Konferans & Oda Sistemleri",
+    "subcategory": "Taşınabilir Konferans Paketleri",
+    "sites": [
+      "jabrapanacast.com.tr",
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "PanaCast kamera, Speak 750 / Speak2 75 konferans hoparlörü, masa standı ve taşıma çantasından oluşan mobil toplantı seti.",
+    "fullDescription": "Her yeri anında profesyonel bir toplantı odasına dönüştürün. Fermuarlı premium seyahat çantası içinde kamera, stüdyo hoparlörü ve kablolar tek pakette.",
+    "specs": {
+      "İçerik": "PanaCast 180° / PanaCast 20 + Speak 750 / Speak2 75 + Masa Standı + 1m USB Kablosu",
+      "Çanta": "Özel korumalı fermuarlı seyahat çantası",
+      "Kullanım Amacı": "Hibrit çalışanlar, seyahat eden ekipler ve esnek ofisler"
+    },
+    "features": [
+      "Tak-çalıştır anında toplantı başlatma",
+      "Stüdyo ses ve 180° panoramik video bir arada",
+      "Mobil iş gücü için ideal korumalı çanta tasarımı"
+    ],
+    "imageUrl": "https://assets2.jabra.com/c/c/f/b/ccfb65e3b0c8558d478dfadd5d53c691e5ef2ee5_Jabra_PanaCast_Meet_Anywhere1s.png",
+    "officialUrl": "https://www.jabra.com/business/video-conferencing/jabra-panacast-bundle/buy",
+    "roomSize": "Mobil / Her Yerde Toplantı (1-6 Kişi)",
+    "badge": "Taşınabilir Konferans Kiti"
+  },
+  {
+    "id": "jabra-panacast-accessories",
+    "slug": "jabra-panacast-accessories",
+    "model": "Jabra PanaCast Orijinal Aksesuarlar",
+    "title": "PanaCast Montaj Aparatları, Masa Standları & Kablolar",
+    "category": "panacast",
+    "categoryName": "Aksesuarlar",
+    "subcategory": "PanaCast Aksesuarları",
+    "sites": [
+      "jabrapanacast.com.tr",
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "PanaCast 50 ve PanaCast için Masa Standı, Ekran Montaj Aparatı, Duvar Aparatı ve Uzun USB Kablo aksesuarları.",
+    "fullDescription": "Toplantı odanızın estetiğini ve kablolamasını tamamlayan Jabra onaylı orijinal aksesuarlar.",
+    "specs": {
+      "Masa Standı": "PanaCast 50 ve PanaCast için ağırlıklı masa standı",
+      "Ekran Montajı": "VESA uyumlu ekran altı/üstü ayarlanabilir montaj kolu",
+      "Kablolar": "USB 3.0 / USB-C 1.8m, 5m ve optik uzun mesafe kabloları"
+    },
+    "features": [
+      "Orijinal Jabra mühendislik standartları",
+      "Kolay montaj ve gizli kablo geçiş kanalları",
+      "Siyah ve gri renk seçenekleri"
+    ],
+    "imageUrl": "https://assets2.jabra.com/1/4/2/f/142fdb59906cebf07c63b2312f7710001bebf25e_Jabra_PanaCast50_table_stand_grey_02.png",
+    "officialUrl": "https://www.jabra.com/business/video-conferencing/jabra-panacast-50",
+    "badge": "Orijinal Aksesuar"
+  },
+  {
+    "id": "jabra-speak2-75",
+    "slug": "jabra-speak2-75",
+    "model": "Jabra Speak2 75",
+    "title": "Jabra Speak2 75 Amiral Gemisi Hibrit Konferans Hoparlörü",
+    "category": "speakerphone",
+    "categoryName": "Konferans Hoparlörleri",
+    "subcategory": "Speak2 Serisi",
+    "sites": [
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "65mm süper geniş bant hoparlörü, 4 beamforming mikrofonu ve patentli 360° Mikrofon Kalite Göstergesi LED halkasıyla toplantıların amiral gemisi.",
+    "fullDescription": "Jabra Speak2 75, yeni nesil profesyonel konferans standartlarını belirler. Super-wideband ses teknolojisi ve 65mm hoparlörü ile kristal netliğinde ses ve zengin baslar sunar. Eşsiz 360° Mikrofon Kalite Göstergesi, sesinizin ne kadar iyi iletildiğini yeşil/turuncu/kırmızı renklerle anında gösterir. 32 saate varan pil ömrü ve IP64 korumasıyla her ortamda yanınızda.",
+    "specs": {
+      "Hoparlör Boyutu": "65mm Tam Aralıklı Hoparlör (Super-Wideband Ses)",
+      "Mikrofon Dizilimi": "4 adet Beamforming Mikrofon (360° Ses Yakalama)",
+      "Mikrofon Kalite Göstergesi": "360° LED Işık Halkası (Yeşil / Turuncu / Kırmızı Canlı Geri Bildirim)",
+      "Ses Teknolojisi": "Tam Çift Yönlü (Full-Duplex) & Ses Seviyesi Normalleştirme (Voice Level Normalization)",
+      "Batarya": "32 Saate Kadar Kablosuz Kullanım Süresi",
+      "Bağlantı": "Entegre USB-C + USB-A Tek Kablo, Bluetooth 5.2 (Link 380 adaptörlü opsiyon)",
+      "Dayanıklılık": "IP64 Su ve Toz Dayanıklılık Sertifikası"
+    },
+    "features": [
+      "Super-wideband ses mimarisiyle stüdyo doğallığında insan sesi",
+      "360° Mikrofon Kalite Göstergesi ile ses seviyenizi anında görselleştirme",
+      "Ses Seviyesi Normalleştirme ile fısıltıları yükseltip bağıranları dengeleme",
+      "Aynı kabloda hem USB-C hem USB-A adaptör ucu entegre",
+      "Microsoft Teams Rooms, Zoom ve Google Meet resmi sertifikaları"
+    ],
+    "imageUrl": "https://assets2.jabra.com/d/c/a/4/dca4ff97bffb3ecd87295dfb61418ad532d4579a_00_Speak2_75_MS.png",
+    "officialUrl": "https://www.jabra.com/business/speakerphones/jabra-speak-series/jabra-speak2-75",
+    "datasheetUrl": "https://www.jabra.com/_/media/Jabra_VXi_Product-Documentation/Jabra-Speak2-75/Technical-specifications/RevC/EN-Speak2-75-Tech-Spechs-180924.pdf",
+    "roomSize": "Orta Oda & Hibrit Masa (6-8 Kişi)",
+    "badge": "Amiral Gemisi Ses"
+  },
+  {
+    "id": "jabra-speak2-55",
+    "slug": "jabra-speak2-55",
+    "model": "Jabra Speak2 55",
+    "title": "Jabra Speak2 55 Kablosuz & USB Profesyonel Hoparlör",
+    "category": "speakerphone",
+    "categoryName": "Konferans Hoparlörleri",
+    "subcategory": "Speak2 Serisi",
+    "sites": [
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "50mm tam aralıklı hoparlör, 4 beamforming mikrofon, Tam Çift Yönlü ses, 12 saat pil ve çift USB-C/A bağlantı.",
+    "fullDescription": "Esnek hibrit çalışanlar için tasarlanmış Speak2 55, cebinize sığacak boyutlarda tam donanımlı bir toplantı odası ses kalitesi sunar. Ses seviyesi normalleştirme özelliği sayesinde odadaki herkes eşit netlikte duyulur.",
+    "specs": {
+      "Hoparlör": "50mm Tam Aralıklı Hoparlör",
+      "Mikrofon": "4 Beamforming Mikrofon, Full-Duplex Ses",
+      "Batarya": "12 Saate Kadar Kablosuz Pil Ömrü",
+      "Bağlantı": "Entegre USB-C / USB-A Kablo + Bluetooth 5.1",
+      "Koruma": "IP64 Su ve Toz Dayanıklılığı"
+    },
+    "features": [
+      "İki tarafın aynı anda konuşabildiği Tam Çift Yönlü iletişim",
+      "Entegre USB-C & USB-A kablo ile her bilgisayarla doğrudan uyum",
+      "Gelişmiş yankı ve arka plan gürültüsü filtresi"
+    ],
+    "imageUrl": "https://assets2.jabra.com/4/f/3/3/4f337b1e661525cd0680f494d71bfc7886308ff2_00_Jabra_Speak2_55_UC.png",
+    "officialUrl": "https://www.jabra.com/business/speakerphones/jabra-speak-series/jabra-speak2-55",
+    "datasheetUrl": "https://www.jabra.com/_/media/Jabra_VXi_Product-Documentation/Jabra-Speak2-Range/Datasheets/RevB/EN-Jabra-Speak2-Range-Datasheet-A4-060623-WEB.pdf",
+    "roomSize": "Küçük Oda & Kişisel (1-6 Kişi)",
+    "badge": "Taşınabilir Güç"
+  },
+  {
+    "id": "jabra-speak2-40",
+    "slug": "jabra-speak2-40",
+    "model": "Jabra Speak2 40",
+    "title": "Jabra Speak2 40 Kablolu Profesyonel Konferans Hoparlörü",
+    "category": "speakerphone",
+    "categoryName": "Konferans Hoparlörleri",
+    "subcategory": "Speak2 Serisi",
+    "sites": [
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "Kabloyla anında bağlanan, şarj gerektirmeyen, 4 beamforming mikrofonlu ve Full-Duplex sesli konferans hoparlörü.",
+    "fullDescription": "Sabit ofis masaları ve odak alanları için batarya derdi olmayan tak-çalıştır ses çözümü. %50'den fazla geri dönüştürülmüş malzemeyle çevre dostudur.",
+    "specs": {
+      "Hoparlör": "50mm Hoparlör, Geniş Bant Ses",
+      "Mikrofon": "4 Beamforming Mikrofon",
+      "Bağlantı": "Entegre Çift Başlıklı USB-C / USB-A Kablo",
+      "Güç": "Doğrudan USB üzerinden çalışır (Bataryasız)"
+    },
+    "features": [
+      "Şarj etme gereksinimi olmadan her an toplantıya hazır",
+      "Smart LED göstergeleri ve dokunmatik kontrol",
+      "Microsoft Teams ve UC sertifikalı"
+    ],
+    "imageUrl": "https://assets2.jabra.com/4/f/3/3/4f337b1e661525cd0680f494d71bfc7886308ff2_00_Jabra_Speak2_55_UC.png",
+    "officialUrl": "https://www.jabra.com/business/speakerphones/jabra-speak-series/jabra-speak2-40",
+    "roomSize": "Kişisel & Küçük Masa (1-4 Kişi)",
+    "badge": "Kablolu Tak-Çalıştır"
+  },
+  {
+    "id": "jabra-speak-750",
+    "slug": "jabra-speak-750",
+    "model": "Jabra Speak 750",
+    "title": "Jabra Speak 750 Premium Konferans Hoparlörü",
+    "category": "speakerphone",
+    "categoryName": "Konferans Hoparlörleri",
+    "subcategory": "Klasik Speak Serisi",
+    "sites": [
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "Gerçek Tam Çift Yönlü ses, Hi-Fi müzik kalitesi ve ikinci hoparlörle kablosuz stereo eşleştirme.",
+    "fullDescription": "Toplantı sırasında iki kişinin aynı anda konuştuğu kesintili durumları ortadan kaldıran Full-Duplex ses mimarisi. İki cihaz tek tuşla kablosuz eşleştirilerek 12 kişilik masalara ses dağıtımı sağlar.",
+    "specs": {
+      "Ses": "Tam Çift Yönlü Ses, Hi-Fi Müzik",
+      "Eşleştirme": "İki Speak 750'yi kablosuz birbirine bağlama (12 kişiye kadar)",
+      "Batarya": "11 saate kadar pil ömrü",
+      "Bağlantı": "USB-A Kablo + Bluetooth (Jabra Link 370 dahil)"
+    },
+    "features": [
+      "Doğal karşılıklı konuşma sağlayan Tam Çift Yönlü ses",
+      "İkinci üniteyle kablosuz çiftleme imkanı",
+      "Özel Microsoft Teams başlatma tuşu"
+    ],
+    "imageUrl": "https://assets2.jabra.com/c/3/3/9/c3393296767374fc002b8fde20b77dcab9f6dd38_a0_Jabra_Speak_750_UC_P01.png",
+    "officialUrl": "https://www.jabra.com/business/speakerphones/jabra-speak-series/jabra-speak-750/buy",
+    "roomSize": "Orta Oda (6-12 Kişi Eşleştirmeli)",
+    "badge": "Kablosuz Stereo Çiftleme"
+  },
+  {
+    "id": "jabra-speak-710",
+    "slug": "jabra-speak-710",
+    "model": "Jabra Speak 710",
+    "title": "Jabra Speak 710 Premium Taşınabilir Hoparlör",
+    "category": "speakerphone",
+    "categoryName": "Konferans Hoparlörleri",
+    "subcategory": "Klasik Speak Serisi",
+    "sites": [
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "Hi-Fi ses performansı, 15 saat pil ömrü ve katlanabilir entegre masa standı.",
+    "fullDescription": "Hem üstün konferans görüşmeleri hem de müzik dinleme keyfi için tasarlanmış şık konferans hoparlörü.",
+    "specs": {
+      "Batarya": "15 Saate Kadar Pil",
+      "Bağlantı": "Bluetooth ve USB",
+      "Mikrofon": "Çok yönlü 360° mikrofon"
+    },
+    "features": [
+      "15 saat pil",
+      "Hi-Fi müzik ve ses",
+      "Link 370 adaptör"
+    ],
+    "imageUrl": "https://assets2.jabra.com/a/8/7/d/a87dec1b0278ed7756667fe8307ab892025d2957_Jabra_Speak_710_product_1.png",
+    "officialUrl": "https://www.jabra.com/business/speakerphones/jabra-speak-series/jabra-speak-710/buy",
+    "badge": "Hi-Fi Konferans"
+  },
+  {
+    "id": "jabra-speak-510",
+    "slug": "jabra-speak-510",
+    "model": "Jabra Speak 510",
+    "title": "Jabra Speak 510 Klasik Konferans Hoparlörü",
+    "category": "speakerphone",
+    "categoryName": "Konferans Hoparlörleri",
+    "subcategory": "Klasik Speak Serisi",
+    "sites": [
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "Dünyanın en çok satan kompakt USB ve Bluetooth konferans hoparlörü.",
+    "fullDescription": "Kompakt, hafif ve dayanıklı. 4 kişiye kadar olan görüşmelerde güvenilir ses iletişimi.",
+    "specs": {
+      "Batarya": "15 Saat Pil",
+      "Bağlantı": "USB-A ve Bluetooth",
+      "Menzil": "100 metreye kadar Bluetooth"
+    },
+    "features": [
+      "Efsanevi dayanıklılık",
+      "Kompakt seyahat kılıfı",
+      "Tak ve konuş"
+    ],
+    "imageUrl": "https://assets2.jabra.com/a/8/7/d/a87dec1b0278ed7756667fe8307ab892025d2957_Jabra_Speak_710_product_1.png",
+    "officialUrl": "https://www.jabra.com/business/speakerphones/jabra-speak-series/jabra-speak-510/buy",
+    "badge": "Klasik Kompakt"
+  },
+  {
+    "id": "jabra-plus-software",
+    "slug": "jabra-plus-software",
+    "model": "Jabra+ (Jabra Plus Cloud Platform)",
+    "title": "Jabra+ Kurumsal Bulut Filo ve Toplantı Odası Yönetim Platformu",
+    "category": "software",
+    "categoryName": "Yazılım ve Filo Yönetimi",
+    "subcategory": "Bulut Yönetim Platformu",
+    "sites": [
+      "jabrapanacast.com.tr",
+      "jabravideokonferans.com",
+      "jabrapartner.com.tr"
+    ],
+    "shortDescription": "Tüm Jabra toplantı odalarını, video barları ve kulaklık filosunu tek bulut panelinden izleme, güncelleme ve analitik platformu.",
+    "fullDescription": "IT yöneticilerine şirket genelindeki tüm Jabra cihazlarının sağlığını, yazılım güncellemelerini ve oda doluluk verilerini merkezi olarak izleme imkanı sunar.",
+    "specs": {
+      "Mimari": "Güvenli Bulut Yönetim Konsolu (Cloud SaaS)",
+      "Desteklenen Cihazlar": "PanaCast Serisi, Speak2 Serisi, Evolve & Engage Kulaklıklar",
+      "Entegrasyonlar": "Microsoft Teams Admin Center, Zoom Device Management"
+    },
+    "features": [
+      "Toplantı odalarının doluluk ve kullanım analitiği",
+      "Toplu uzaktan yazılım güncelleme (Firmware push)",
+      "Cihaz arızalarında anlık bildirim ve IT uyarıları"
+    ],
+    "imageUrl": "https://assets2.jabra.com/8/c/4/b/8c4baf973599ca7670ac432ac06a9d9b51ed436b_jabra_panacast_50_video_bar_system.png",
+    "officialUrl": "https://www.jabra.com/software-and-services/jabra-plus",
+    "badge": "Bulut Filo Yönetimi"
+  }
+]
