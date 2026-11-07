@@ -16,18 +16,13 @@ export default function Navbar() {
           <Link href="/" className="flex items-center group">
             <JabraLogo />
             <div className="h-5 w-[1px] bg-slate-200 mx-3"></div>
-            <div className="flex items-center gap-1.5">
-              <span className="text-slate-900 font-extrabold text-base sm:text-lg tracking-tight">
-                VideoKonferans
-              </span>
-              <span className="text-[10px] font-bold text-sky-800 bg-sky-50 border border-sky-200 px-2 py-0.5 rounded">
-                Toplantı Odaları
-              </span>
-            </div>
+            <span className="text-slate-900 font-extrabold text-base sm:text-lg tracking-tight">
+              VideoKonferans
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-8">
             <a
               href="/#room-configurator"
               className="text-[13px] font-semibold text-slate-600 hover:text-amber-600 transition-colors whitespace-nowrap"
@@ -60,12 +55,8 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          {/* Right Action & Badges */}
-          <div className="hidden sm:flex items-center gap-3">
-            <span className="hidden xl:inline-flex items-center text-[11px] font-semibold text-slate-500 bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md">
-              Teams & Zoom Sertifikalı
-            </span>
-
+          {/* Right Action */}
+          <div className="hidden sm:flex items-center">
             <Link
               href="/teklif-al"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#FFD100] hover:bg-[#FACC15] text-slate-950 font-bold text-xs tracking-wide shadow-xs border border-amber-400/40 transition-all hover:shadow-sm whitespace-nowrap"
