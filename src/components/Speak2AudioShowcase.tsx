@@ -32,48 +32,48 @@ export default function Speak2AudioShowcase() {
   };
 
   return (
-    <section id="speak2-tech" className="py-24 bg-white border-b border-slate-200 text-slate-900 relative">
+    <section id="speak2-tech" className="py-14 sm:py-24 bg-white border-b border-slate-200 text-slate-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-300 text-xs font-bold text-amber-800 mb-3 shadow-sm">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-300 text-xs font-bold text-amber-800 mb-3 shadow-xs">
             <Radio className="w-3.5 h-3.5 text-amber-600" />
             <span>Yeni Nesil Konferans Sesi</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900">
+          <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900">
             Jabra Speak2 Serisi: <span className="text-amber-600">Ses Mühendisliğinde Zirve</span>
           </h2>
-          <p className="mt-3 text-slate-600 text-sm sm:text-base">
+          <p className="mt-3 text-slate-600 text-xs sm:text-base">
             Geleneksel hoparlörlerin iki kişinin aynı anda konuştuğunda sesi kesme problemine son. Gerçek Tam Çift Yönlü ses ve akıllı LED geri bildirim halkası.
           </p>
         </div>
 
         {/* 3 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3 shadow-sm">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 sm:p-6 space-y-2.5 sm:space-y-3 shadow-xs">
             <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
               <Volume2 className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-black text-slate-900">Tam Çift Yönlü (Full-Duplex) Ses</h3>
+            <h3 className="text-base sm:text-lg font-black text-slate-900">Tam Çift Yönlü (Full-Duplex) Ses</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               Her iki taraf da aynı anda konuşabilir. Karşılıklı diyaloglar doğal bir yüz yüze sohbet gibi akar; kelimeler yutulmaz.
             </p>
           </div>
 
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3 shadow-sm">
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 sm:p-6 space-y-2.5 sm:space-y-3 shadow-xs">
             <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
               <SlidersHorizontal className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-black text-slate-900">Ses Seviyesi Normalleştirme</h3>
+            <h3 className="text-base sm:text-lg font-black text-slate-900">Ses Seviyesi Normalleştirme</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               Masanın en ucunda fısıldayan kişi ile mikrofona yakın bağıran kişinin ses seviyesini yapay zeka ile aynı desibele eşitler.
             </p>
           </div>
 
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3 shadow-sm">
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 sm:p-6 space-y-2.5 sm:space-y-3 shadow-xs">
             <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
               <Sparkles className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-black text-slate-900">Super-Wideband & 65mm Hoparlör</h3>
+            <h3 className="text-base sm:text-lg font-black text-slate-900">Super-Wideband & 65mm Hoparlör</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               Standart telefon frekanslarının ötesine geçerek insan sesinin tüm bas ve tını zenginliğini iletir.
             </p>
@@ -81,14 +81,14 @@ export default function Speak2AudioShowcase() {
         </div>
 
         {/* Interactive 360° LED Ring Simulation */}
-        <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 lg:p-12 shadow-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-12 shadow-lg sm:shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* Left simulation controls */}
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-4 sm:space-y-6">
               <div className="inline-block px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-xs font-black text-amber-900">
                 Speak2 75 Patentli Yetenek
               </div>
-              <h3 className="text-2xl sm:text-3xl font-black text-slate-900">
+              <h3 className="text-xl sm:text-3xl font-black text-slate-900">
                 360° Mikrofon Kalite Göstergesi (LED Ring) Simülatörü
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -99,10 +99,10 @@ export default function Speak2AudioShowcase() {
                 <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">
                   Simülasyon Durumunu Seçin:
                 </span>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   <button
                     onClick={() => setLedStatus("good")}
-                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                    className={`flex-1 sm:flex-none px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
                       ledStatus === "good"
                         ? "bg-emerald-600 text-white shadow-md shadow-emerald-600/20"
                         : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-100"
@@ -112,7 +112,7 @@ export default function Speak2AudioShowcase() {
                   </button>
                   <button
                     onClick={() => setLedStatus("medium")}
-                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                    className={`flex-1 sm:flex-none px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
                       ledStatus === "medium"
                         ? "bg-amber-500 text-slate-950 font-black shadow-md shadow-amber-500/20"
                         : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-100"
@@ -122,7 +122,7 @@ export default function Speak2AudioShowcase() {
                   </button>
                   <button
                     onClick={() => setLedStatus("poor")}
-                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                    className={`flex-1 sm:flex-none px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
                       ledStatus === "poor"
                         ? "bg-red-600 text-white shadow-md shadow-red-600/20"
                         : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-100"
@@ -133,7 +133,7 @@ export default function Speak2AudioShowcase() {
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm space-y-1">
+              <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs space-y-1">
                 <h4 className={`text-sm font-black ${statusTexts[ledStatus].color}`}>
                   {statusTexts[ledStatus].title}
                 </h4>
@@ -142,19 +142,19 @@ export default function Speak2AudioShowcase() {
             </div>
 
             {/* Right Visualizer */}
-            <div className="lg:col-span-6 flex flex-col items-center justify-center p-6">
-              <div className="relative w-64 h-64 rounded-full flex items-center justify-center">
+            <div className="lg:col-span-6 flex flex-col items-center justify-center p-4 sm:p-6">
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full flex items-center justify-center">
                 <div
                   className={`absolute inset-0 rounded-full border-4 transition-all duration-700 ${ringColors[ledStatus]}`}
                 />
-                <div className="w-52 h-52 rounded-full bg-slate-900 border border-slate-800 flex flex-col items-center justify-center p-6 text-center shadow-2xl z-10 text-white">
-                  <div className="text-[10px] font-mono tracking-widest text-slate-400 uppercase mb-1">Jabra Speak2 75</div>
-                  <Mic className={`w-8 h-8 my-2 transition-colors duration-500 ${statusTexts[ledStatus].color}`} />
-                  <span className="text-[11px] font-bold text-white block">4x Beamforming</span>
-                  <span className="text-[9px] text-slate-400">32 Saat Pil | IP64</span>
+                <div className="w-36 h-36 sm:w-52 sm:h-52 rounded-full bg-slate-900 border border-slate-800 flex flex-col items-center justify-center p-4 sm:p-6 text-center shadow-2xl z-10 text-white">
+                  <div className="text-[9px] sm:text-[10px] font-mono tracking-widest text-slate-400 uppercase mb-0.5 sm:mb-1">Jabra Speak2 75</div>
+                  <Mic className={`w-6 h-6 sm:w-8 sm:h-8 my-1 sm:my-2 transition-colors duration-500 ${statusTexts[ledStatus].color}`} />
+                  <span className="text-[10px] sm:text-[11px] font-bold text-white block">4x Beamforming</span>
+                  <span className="text-[8px] sm:text-[9px] text-slate-400">32 Saat Pil | IP64</span>
                 </div>
               </div>
-              <div className="mt-6 text-center text-xs text-slate-500 font-bold">
+              <div className="mt-4 sm:mt-6 text-center text-xs text-slate-500 font-bold">
                 Canlı Görsel LED Halkası Durumu: <span className="text-slate-900">{ledStatus.toUpperCase()}</span>
               </div>
             </div>

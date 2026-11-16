@@ -142,50 +142,50 @@ export default function RoomConfigurator() {
   const currentPkg = packages[roomSize][platform];
 
   return (
-    <section id="room-configurator" className="py-24 bg-slate-50 border-b border-slate-200 text-slate-900 relative">
+    <section id="room-configurator" className="py-14 sm:py-24 bg-slate-50 border-b border-slate-200 text-slate-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-amber-300 text-xs font-bold text-amber-700 mb-3 shadow-sm">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-amber-300 text-xs font-bold text-amber-700 mb-3 shadow-xs">
             <Sliders className="w-3.5 h-3.5 text-amber-500" />
             <span>Akıllı Toplantı Odası Konfigüratörü</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900">
+          <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900">
             Toplantı Odanız İçin <span className="text-amber-600">İdeal Paketi Bulun</span>
           </h2>
-          <p className="mt-3 text-slate-600 text-sm sm:text-base">
+          <p className="mt-3 text-slate-600 text-xs sm:text-base">
             Oda büyüklüğünüzü ve kullanmak istediğiniz platformu seçin; mühendislerimizin önerdiği ideal kamera, hoparlör ve kontrol cihazı paketini anında görün.
           </p>
         </div>
 
-        <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xl">
+        <div className="bg-white border border-slate-200 rounded-2xl sm:rounded-3xl p-4 sm:p-10 shadow-lg sm:shadow-xl">
           {/* Step 1: Room Size */}
-          <div className="mb-8">
-            <div className="flex items-center gap-2 mb-4">
+          <div className="mb-6 sm:mb-8">
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <span className="w-6 h-6 rounded-full bg-[#FFD100] text-slate-950 font-black text-xs flex items-center justify-center">
                 1
               </span>
-              <h3 className="text-base font-bold text-slate-900">Toplantı Odanızın Boyutunu Seçin:</h3>
+              <h3 className="text-sm sm:text-base font-bold text-slate-900">Toplantı Odanızın Boyutunu Seçin:</h3>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
               {[
-                { id: "personal", label: "Kişisel / Telefon Kulübesi", capacity: "1 - 2 Kişi" },
-                { id: "small", label: "Küçük Oda / Huddle Room", capacity: "2 - 6 Kişi" },
-                { id: "medium", label: "Orta Boy Toplantı Odası", capacity: "6 - 10 Kişi" },
-                { id: "boardroom", label: "Büyük Oda / Yönetim Kurulu", capacity: "10+ Kişi" },
+                { id: "personal", label: "Kişisel / Odak Odası", capacity: "1 - 2 Kişi" },
+                { id: "small", label: "Küçük Oda / Huddle", capacity: "2 - 6 Kişi" },
+                { id: "medium", label: "Orta Boy Oda (Popüler)", capacity: "6 - 10 Kişi" },
+                { id: "boardroom", label: "Büyük Oda / Kurul", capacity: "10+ Kişi" },
               ].map((size) => (
                 <button
                   key={size.id}
                   onClick={() => setRoomSize(size.id)}
-                  className={`p-4 rounded-2xl border text-left transition-all ${
+                  className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl border text-left transition-all ${
                     roomSize === size.id
-                      ? "bg-amber-50/50 border-amber-400 shadow-md scale-[1.02]"
+                      ? "bg-amber-50/50 border-amber-400 shadow-sm scale-[1.01]"
                       : "bg-slate-50 border-slate-200 hover:border-slate-300"
                   }`}
                 >
-                  <Users className={`w-5 h-5 mb-2 ${roomSize === size.id ? "text-amber-600" : "text-slate-400"}`} />
-                  <div className="text-xs font-black text-slate-900 leading-snug">{size.label}</div>
-                  <div className="text-[11px] text-slate-500 mt-1">{size.capacity}</div>
+                  <Users className={`w-4 h-4 sm:w-5 sm:h-5 mb-1.5 sm:mb-2 ${roomSize === size.id ? "text-amber-600" : "text-slate-400"}`} />
+                  <div className="text-[11px] sm:text-xs font-black text-slate-900 leading-snug">{size.label}</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 mt-0.5 sm:mt-1">{size.capacity}</div>
                 </button>
               ))}
             </div>
@@ -267,22 +267,22 @@ export default function RoomConfigurator() {
                 <h4 className="text-2xl font-black text-slate-900">{currentPkg.title}</h4>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{currentPkg.desc}</p>
 
-                <div className="space-y-2 py-3 border-y border-slate-200 text-xs">
-                  <div className="flex justify-between items-center">
+                <div className="space-y-2.5 py-3 border-y border-slate-200 text-xs">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-0.5">
                     <span className="text-slate-500 font-bold">Kamera / Video Bar:</span>
-                    <span className="text-slate-900 font-semibold text-right">{currentPkg.camera}</span>
+                    <span className="text-slate-900 font-semibold">{currentPkg.camera}</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-0.5">
                     <span className="text-slate-500 font-bold">Ses & Mikrofon Sistemi:</span>
-                    <span className="text-slate-900 font-semibold text-right">{currentPkg.audio}</span>
+                    <span className="text-slate-900 font-semibold">{currentPkg.audio}</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-0.5">
                     <span className="text-slate-500 font-bold">Kontrol Paneli:</span>
-                    <span className="text-slate-900 font-semibold text-right">{currentPkg.controller}</span>
+                    <span className="text-slate-900 font-semibold">{currentPkg.controller}</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-0.5">
                     <span className="text-slate-500 font-bold">Kablolama Altyapısı:</span>
-                    <span className="text-slate-900 font-semibold text-right">{currentPkg.cable}</span>
+                    <span className="text-slate-900 font-semibold">{currentPkg.cable}</span>
                   </div>
                 </div>
 

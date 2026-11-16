@@ -4,59 +4,59 @@ import { ArrowRight, Sliders, Video, Mic } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50/30 to-white pt-14 pb-20 border-b border-slate-200 text-slate-900">
-      <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-sky-200/30 blur-[130px] pointer-events-none rounded-full" />
-      <div className="absolute top-1/3 right-1/4 w-[500px] h-[250px] bg-indigo-200/20 blur-[140px] pointer-events-none rounded-full" />
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50/30 to-white pt-8 sm:pt-14 pb-14 sm:pb-20 border-b border-slate-200 text-slate-900">
+      <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[200px] sm:h-[300px] bg-sky-200/30 blur-[90px] sm:blur-[130px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/3 right-1/4 w-[300px] sm:w-[500px] h-[150px] sm:h-[250px] bg-indigo-200/20 blur-[100px] sm:blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Certification badges header */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-xs font-bold text-indigo-700 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
-            <span>Microsoft Teams Rooms Resmi Sertifikalı</span>
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-5 sm:mb-6">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-[10px] sm:text-xs font-bold text-indigo-700 shadow-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse" />
+            <span>Microsoft Teams Rooms Sertifikalı</span>
           </div>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-blue-700 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-            <span>Zoom Rooms Resmi Sertifikalı</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[10px] sm:text-xs font-bold text-blue-700 shadow-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
+            <span>Zoom Rooms Sertifikalı</span>
           </div>
         </div>
 
         {/* Main Headline */}
-        <div className="text-center max-w-4xl mx-auto mb-8">
-          <h1 className="text-4xl sm:text-6xl font-black tracking-tight leading-[1.15] text-slate-900">
+        <div className="text-center max-w-4xl mx-auto mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-snug sm:leading-[1.15] text-slate-900 break-words">
             Toplantı Odalarınızı{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-amber-600">
               Teams ve Zoom Sertifikalı
             </span>{" "}
             Jabra Video Konferans Sistemleriyle Dönüştürün
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto">
             180° Panoramik 4K PanaCast video barları ile stüdyo kalitesindeki Speak2 tam çift yönlü hoparlörlerini birleştiren anahtar teslim toplantı odası çözümleri.
           </p>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-16">
           <a
             href="#room-configurator"
-            className="w-full sm:w-auto bg-[#FFD100] hover:bg-[#E6BC00] text-slate-950 font-black text-base px-8 py-4 rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl shadow-amber-400/25 flex items-center justify-center gap-3"
+            className="w-full sm:w-auto bg-[#FFD100] hover:bg-[#E6BC00] text-slate-950 font-black text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-full transition-all shadow-lg shadow-amber-400/20 flex items-center justify-center gap-2 text-center"
           >
-            <Sliders className="w-5 h-5" />
+            <Sliders className="w-4 h-4 sm:w-5 sm:h-5" />
             <span>Oda Boyutuna Göre Çözüm Bul</span>
           </a>
           <Link
             href="/teklif-al"
-            className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 font-bold text-base px-8 py-4 rounded-full border border-slate-300 shadow-sm transition-all duration-300 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-full border border-slate-300 shadow-xs transition-all flex items-center justify-center gap-2 text-center"
           >
             <span>Ücretsiz Keşif & Demo Talep Et</span>
-            <ArrowRight className="w-5 h-5 text-amber-500" />
+            <ArrowRight className="w-4 h-4 text-amber-500" />
           </Link>
         </div>
 
         {/* Dual Showcase Card */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 max-w-5xl mx-auto">
           {/* Card 1 */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-8 relative overflow-hidden group hover:border-blue-400 hover:shadow-xl transition-all shadow-md">
+          <div className="bg-white border border-slate-200 rounded-2xl sm:rounded-3xl p-5 sm:p-8 relative overflow-hidden group hover:border-blue-400 hover:shadow-xl transition-all shadow-xs sm:shadow-md">
             <div className="flex items-center justify-between mb-4">
               <span className="text-[11px] font-black uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
                 180° Video Bar Ailesi

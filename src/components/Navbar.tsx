@@ -1,21 +1,29 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import JabraLogo from "./JabraLogo";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronRight } from "lucide-react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setMobileMenuOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand Identity */}
-          <Link href="/" className="flex items-center group">
+          <Link href="/" className="flex items-center group flex-shrink-0">
             <JabraLogo />
-            <div className="h-5 w-[1px] bg-slate-200 mx-3"></div>
+            <div className="h-5 w-[1px] bg-slate-200 mx-2.5 sm:mx-3"></div>
             <span className="text-slate-900 font-extrabold text-base sm:text-lg tracking-tight">
               VideoKonferans
             </span>
@@ -66,14 +74,20 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
-          <div className="flex lg:hidden">
+          {/* Mobile menu trigger */}
+          <div className="flex lg:hidden items-center gap-2">
+            <Link
+              href="/teklif-al"
+              className="sm:hidden px-3 py-1.5 rounded-lg bg-[#FFD100] text-slate-950 font-black text-[11px] shadow-xs whitespace-nowrap"
+            >
+              Teklif Al
+            </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition-colors"
+              className="p-2.5 text-slate-700 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition-colors"
               aria-label="Menü"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -81,49 +95,55 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3 shadow-lg">
+        <div className="lg:hidden bg-white/98 backdrop-blur-xl border-b border-slate-200 px-4 py-4 space-y-1 shadow-2xl max-h-[calc(100dvh-4rem)] overflow-y-auto">
           <a
             href="/#room-configurator"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50 rounded-lg"
+            className="flex items-center justify-between px-3.5 py-3 text-sm font-bold text-slate-800 hover:bg-amber-50/60 rounded-xl transition-colors border-b border-slate-100"
           >
-            Oda Konfigüratörü
+            <span>Oda Konfigüratörü</span>
+            <ChevronRight className="w-4 h-4 text-slate-400" />
           </a>
           <Link
             href="/urunler?category=panacast"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50 rounded-lg"
+            className="flex items-center justify-between px-3.5 py-3 text-sm font-bold text-slate-800 hover:bg-amber-50/60 rounded-xl transition-colors border-b border-slate-100"
           >
-            PanaCast Video Barlar
+            <span>PanaCast Video Barlar</span>
+            <ChevronRight className="w-4 h-4 text-slate-400" />
           </Link>
           <Link
             href="/urunler?category=speakerphone"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50 rounded-lg"
+            className="flex items-center justify-between px-3.5 py-3 text-sm font-bold text-slate-800 hover:bg-amber-50/60 rounded-xl transition-colors border-b border-slate-100"
           >
-            Speak2 Hoparlörler
+            <span>Speak2 Hoparlörler</span>
+            <ChevronRight className="w-4 h-4 text-slate-400" />
           </Link>
           <a
             href="/#speak2-tech"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50 rounded-lg"
+            className="flex items-center justify-between px-3.5 py-3 text-sm font-bold text-slate-800 hover:bg-amber-50/60 rounded-xl transition-colors border-b border-slate-100"
           >
-            Ses Teknolojisi
+            <span>Ses Teknolojisi</span>
+            <ChevronRight className="w-4 h-4 text-slate-400" />
           </a>
           <Link
             href="/karsilastir"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50 rounded-lg"
+            className="flex items-center justify-between px-3.5 py-3 text-sm font-bold text-slate-800 hover:bg-amber-50/60 rounded-xl transition-colors"
           >
-            Karşılaştır
+            <span>Sistem Karşılaştırma</span>
+            <ChevronRight className="w-4 h-4 text-slate-400" />
           </Link>
-          <div className="pt-2">
+
+          <div className="pt-3 space-y-2">
             <Link
               href="/teklif-al"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-[#FFD100] text-slate-950 font-bold text-xs shadow-xs"
+              className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-[#FFD100] text-slate-950 font-black text-sm shadow-md"
             >
-              <span>Keşif & Teklif Al</span>
+              <span>Ücretsiz Keşif & Teklif Al</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

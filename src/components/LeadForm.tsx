@@ -52,13 +52,13 @@ export default function LeadForm({
   }
 
   return (
-    <div className="bg-white rounded-3xl border border-slate-200/90 p-8 sm:p-10 shadow-xl text-slate-800">
-      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-[11px] font-bold text-red-600 mb-4">
+    <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 p-4 sm:p-8 lg:p-10 shadow-lg sm:shadow-xl text-slate-800">
+      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-[11px] font-bold text-red-600 mb-3 sm:mb-4">
         <Sparkles className="w-3.5 h-3.5" />
         <span>{badgeText}</span>
       </div>
 
-      <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-8">
+      <h2 className="text-xl sm:text-3xl font-black text-slate-900 tracking-tight mb-6 sm:mb-8">
         Ürün Bilgi, Fiyat Teklifi & Proje Başvuru Formu
       </h2>
 

@@ -70,55 +70,58 @@ export default function ComparePage() {
   ];
 
   return (
-    <div className="py-16 bg-slate-50 text-slate-900">
+    <div className="py-10 sm:py-16 bg-slate-50 text-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-amber-600 mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-amber-600 mb-6 sm:mb-8 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Ana Sayfaya Dön</span>
         </Link>
 
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <span className="text-xs font-black text-amber-600 uppercase tracking-wider block mb-2">
             Teknik Karşılaştırma Merkezi
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900">
+          <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900">
             Toplantı Odası Video ve Ses Sistemleri Karşılaştırması
           </h1>
-          <p className="mt-3 text-slate-600 text-sm">
+          <p className="mt-3 text-slate-600 text-xs sm:text-sm">
             İhtiyacınıza en uygun video barı ve konferans hoparlörünü teknik detaylarıyla kıyaslayın.
           </p>
         </div>
 
         {/* Section 1: Video Systems */}
-        <div className="mb-16">
-          <h2 className="text-xl font-black text-slate-900 mb-6 flex items-center gap-2">
+        <div className="mb-12 sm:mb-16">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 mb-4 sm:mb-6 flex items-center gap-2">
             <Video className="w-5 h-5 text-blue-600" />
             <span>PanaCast Video Bar Karşılaştırması</span>
           </h2>
-          <div className="overflow-x-auto rounded-3xl border border-slate-200 bg-white shadow-xl">
-            <table className="w-full text-left text-xs sm:text-sm">
+          <div className="sm:hidden flex items-center justify-center gap-1.5 text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-xl py-2 px-3 mb-3 font-semibold">
+            <span>👉 Tabloyu sağa-sola kaydırarak inceleyebilirsiniz</span>
+          </div>
+          <div className="overflow-x-auto touch-scroll rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-lg sm:shadow-xl">
+            <table className="w-full min-w-[640px] text-left text-xs sm:text-sm">
               <thead className="bg-slate-100/70 border-b border-slate-200 text-slate-600 font-bold">
                 <tr>
-                  <th className="p-4">Model Adı</th>
-                  <th className="p-4">Çalışma Mimarisi</th>
-                  <th className="p-4">Kamera Özelliği</th>
-                  <th className="p-4">Ses Donanımı</th>
-                  <th className="p-4">Önerilen Oda Boyutu</th>
-                  <th className="p-4">Sertifikalar</th>
+                  <th className="p-3.5 sm:p-4">Model Adı</th>
+                  <th className="p-3.5 sm:p-4">Çalışma Mimarisi</th>
+                  <th className="p-3.5 sm:p-4">Kamera Özelliği</th>
+                  <th className="p-3.5 sm:p-4">Ses Donanımı</th>
+                  <th className="p-3.5 sm:p-4">Önerilen Oda Boyutu</th>
+                  <th className="p-3.5 sm:p-4">Sertifikalar</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {videoSystems.map((v, i) => (
                   <tr key={i} className="hover:bg-slate-50">
-                    <td className="p-4 font-black text-slate-900 text-sm">{v.model}</td>
-                    <td className="p-4 text-slate-600">{v.os}</td>
-                    <td className="p-4 text-blue-700 font-bold">{v.camera}</td>
-                    <td className="p-4 text-slate-600">{v.audio}</td>
-                    <td className="p-4 text-amber-700 font-bold">{v.room}</td>
-                    <td className="p-4 text-emerald-700 font-semibold">{v.teamsCert}</td>
+                    <td className="p-3.5 sm:p-4 font-black text-slate-900 text-sm">{v.model}</td>
+                    <td className="p-3.5 sm:p-4 text-slate-600">{v.os}</td>
+                    <td className="p-3.5 sm:p-4 text-blue-700 font-bold">{v.camera}</td>
+                    <td className="p-3.5 sm:p-4 text-slate-600">{v.audio}</td>
+                    <td className="p-3.5 sm:p-4 text-amber-700 font-bold">{v.room}</td>
+                    <td className="p-3.5 sm:p-4 text-emerald-700 font-semibold">{v.teamsCert}</td>
                   </tr>
                 ))}
               </tbody>
@@ -127,32 +130,35 @@ export default function ComparePage() {
         </div>
 
         {/* Section 2: Audio Systems */}
-        <div className="mb-16">
-          <h2 className="text-xl font-black text-slate-900 mb-6 flex items-center gap-2">
+        <div className="mb-12 sm:mb-16">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 mb-4 sm:mb-6 flex items-center gap-2">
             <Mic className="w-5 h-5 text-emerald-600" />
             <span>Speak2 & Speak Konferans Hoparlörleri Karşılaştırması</span>
           </h2>
-          <div className="overflow-x-auto rounded-3xl border border-slate-200 bg-white shadow-xl">
-            <table className="w-full text-left text-xs sm:text-sm">
+          <div className="sm:hidden flex items-center justify-center gap-1.5 text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-xl py-2 px-3 mb-3 font-semibold">
+            <span>👉 Tabloyu sağa-sola kaydırarak inceleyebilirsiniz</span>
+          </div>
+          <div className="overflow-x-auto touch-scroll rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-lg sm:shadow-xl">
+            <table className="w-full min-w-[640px] text-left text-xs sm:text-sm">
               <thead className="bg-slate-100/70 border-b border-slate-200 text-slate-600 font-bold">
                 <tr>
-                  <th className="p-4">Model Adı</th>
-                  <th className="p-4">Hoparlör Boyutu</th>
-                  <th className="p-4">Mikrofon Sistemi</th>
-                  <th className="p-4">360° Kalite Göstergesi</th>
-                  <th className="p-4">Kablosuz Pil Süresi</th>
-                  <th className="p-4">Bağlantı & Koruma</th>
+                  <th className="p-3.5 sm:p-4">Model Adı</th>
+                  <th className="p-3.5 sm:p-4">Hoparlör Boyutu</th>
+                  <th className="p-3.5 sm:p-4">Mikrofon Sistemi</th>
+                  <th className="p-3.5 sm:p-4">360° Kalite Göstergesi</th>
+                  <th className="p-3.5 sm:p-4">Kablosuz Pil Süresi</th>
+                  <th className="p-3.5 sm:p-4">Bağlantı & Koruma</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {audioSystems.map((a, i) => (
                   <tr key={i} className="hover:bg-slate-50">
-                    <td className="p-4 font-black text-slate-900 text-sm">{a.model}</td>
-                    <td className="p-4 text-slate-600">{a.speaker}</td>
-                    <td className="p-4 text-emerald-700 font-bold">{a.mics}</td>
-                    <td className="p-4 text-amber-700 font-black">{a.ledRing}</td>
-                    <td className="p-4 text-slate-900 font-bold">{a.battery}</td>
-                    <td className="p-4 text-slate-600">{a.cable} | {a.rating}</td>
+                    <td className="p-3.5 sm:p-4 font-black text-slate-900 text-sm">{a.model}</td>
+                    <td className="p-3.5 sm:p-4 text-slate-600">{a.speaker}</td>
+                    <td className="p-3.5 sm:p-4 text-emerald-700 font-bold">{a.mics}</td>
+                    <td className="p-3.5 sm:p-4 text-amber-700 font-black">{a.ledRing}</td>
+                    <td className="p-3.5 sm:p-4 text-slate-900 font-bold">{a.battery}</td>
+                    <td className="p-3.5 sm:p-4 text-slate-600">{a.cable} | {a.rating}</td>
                   </tr>
                 ))}
               </tbody>

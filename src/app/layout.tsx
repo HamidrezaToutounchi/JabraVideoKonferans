@@ -1,7 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   title: "Jabra Video Konferans & Toplantı Odası Sistemleri — Türkiye Resmi Çözüm Merkezi",
@@ -16,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr" className="scroll-smooth">
-      <body className="bg-[#0A0F1D] text-[#F8FAFC] min-h-screen flex flex-col antialiased">
+      <body className="bg-slate-50 text-slate-900 min-h-screen flex flex-col antialiased overflow-x-hidden selection:bg-amber-300 selection:text-slate-950">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
