@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Package, User, Building2, Mail, Phone, Send, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Package, User, Building2, Mail, Phone, Send, ShieldCheck, Sparkles } from "lucide-react";
 import KvkkModal from "./KvkkModal";
 
 export default function LeadForm({
@@ -11,7 +12,7 @@ export default function LeadForm({
   defaultProduct?: string;
   badgeText?: string;
 }) {
-  const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
   const [isKvkkModalOpen, setIsKvkkModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     product: defaultProduct,
@@ -29,28 +30,26 @@ export default function LeadForm({
       alert("Lütfen KVKK Aydınlatma Metni'ni onaylayınız.");
       return;
     }
-    setSubmitted(true);
+    if (typeof window !== "undefined") {
+      try {
+        sessionStorage.setItem(
+          "lastLeadSubmission",
+          JSON.stringify({
+            product: formData.product,
+            quantity: formData.quantity,
+            name: formData.name,
+            company: formData.company,
+            email: formData.email,
+            phone: formData.phone,
+            submittedAt: new Date().toISOString(),
+          })
+        );
+      } catch (_err) {
+        // ignore
+      }
+    }
+    router.push("/basarili");
   };
-
-  if (submitted) {
-    return (
-      <div className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-xl text-center space-y-4">
-        <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-          <CheckCircle2 className="w-10 h-10" />
-        </div>
-        <h3 className="text-2xl font-black text-slate-900">Talebiniz Başarıyla Alındı!</h3>
-        <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-          Video konferans uzmanımız en geç <strong>2 iş saati</strong> içinde odanızın mimarisine uygun resmi teklif ve test cihazı planlamasıyla dönüş yapacaktır.
-        </p>
-        <button
-          onClick={() => setSubmitted(false)}
-          className="mt-4 px-6 py-2.5 bg-[#FFD100] text-slate-950 font-bold text-xs rounded-full hover:bg-[#E6BC00] transition-colors"
-        >
-          Yeni Form Gönder
-        </button>
-      </div>
-    );
-  }
 
   return (
     <>
