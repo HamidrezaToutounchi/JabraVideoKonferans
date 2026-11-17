@@ -102,26 +102,33 @@ export default function Footer() {
             <ul className="space-y-3 text-xs">
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#FFD100]" />
-                <span className="text-slate-200">0850 300 JABRA (5227)</span>
+                <a href="tel:08508500855" className="text-slate-200 hover:text-[#FFD100] transition-colors font-semibold">
+                  0850 850 08 55
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#FFD100]" />
-                <span className="text-slate-200">proje@jabravideokonferans.com</span>
+                <a href="mailto:destek@tescom.com.tr" className="text-slate-200 hover:text-[#FFD100] transition-colors">
+                  destek@tescom.com.tr
+                </a>
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#FFD100] mt-0.5" />
-                <span>İstanbul Maslak & Ankara Çözüm Merkezi</span>
+                <span>Barbaros Hayrettin Paşa Mah. Şehitler Cad. Gümüş Residence No: 8 Daire: 323 Esenyurt / İSTANBUL</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} jabravideokonferans.com — Türkiye Toplantı Odası Video ve Ses Çözüm Merkezi.</p>
+          <p>© {new Date().getFullYear()} jabravideokonferans.com — TESCOM TELEKOMÜNİKASYON VE İLETİŞİM HİZ. SAN. TİC. LTD. ŞTİ.</p>
           <div className="flex space-x-6 text-slate-500">
-            <span>Gizlilik Politikası</span>
-            <span>KVKK Bildirimi</span>
-            <span>Oda Kurulum Şartları</span>
+            <Link href="/kvkk" className="hover:text-[#FFD100] transition-colors">
+              KVKK Aydınlatma Metni
+            </Link>
+            <Link href="/teklif-al" className="hover:text-[#FFD100] transition-colors">
+              Keşif & Teklif Talebi
+            </Link>
           </div>
         </div>
       </div>

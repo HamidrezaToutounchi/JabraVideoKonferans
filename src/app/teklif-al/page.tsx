@@ -48,11 +48,15 @@ export default function TeklifAlPage() {
               <span className="text-xs font-black text-slate-900 block">Doğrudan İletişim:</span>
               <div className="flex items-center gap-3 text-xs text-slate-700">
                 <PhoneCall className="w-4 h-4 text-amber-600" />
-                <span className="font-semibold">0850 300 JABRA (5227)</span>
+                <a href="tel:08508500855" className="font-semibold hover:text-amber-600 transition-colors">
+                  0850 850 08 55
+                </a>
               </div>
               <div className="flex items-center gap-3 text-xs text-slate-700">
                 <Mail className="w-4 h-4 text-amber-600" />
-                <span className="font-semibold">proje@jabravideokonferans.com</span>
+                <a href="mailto:destek@tescom.com.tr" className="font-semibold hover:text-amber-600 transition-colors">
+                  destek@tescom.com.tr
+                </a>
               </div>
             </div>
           </div>
