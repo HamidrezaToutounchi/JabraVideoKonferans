@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Package, User, Building2, Mail, Phone, Send, ShieldCheck, Sparkles } from "lucide-react";
+import { Package, User, Building2, Mail, Phone, Send, ShieldCheck, Sparkles, Loader2, AlertCircle } from "lucide-react";
 import KvkkModal from "./KvkkModal";
 
 export default function LeadForm({
@@ -14,41 +14,84 @@ export default function LeadForm({
 }) {
   const router = useRouter();
   const [isKvkkModalOpen, setIsKvkkModalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
+    requestType: "teklif",
     product: defaultProduct,
     quantity: "1 - 5 Toplantı Odası",
     name: "",
     company: "",
     email: "",
     phone: "",
+    website: "",
     kvkkAccepted: true,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.kvkkAccepted) {
       alert("Lütfen KVKK Aydınlatma Metni'ni onaylayınız.");
       return;
     }
-    if (typeof window !== "undefined") {
-      try {
-        sessionStorage.setItem(
-          "lastLeadSubmission",
-          JSON.stringify({
-            product: formData.product,
-            quantity: formData.quantity,
-            name: formData.name,
-            company: formData.company,
-            email: formData.email,
-            phone: formData.phone,
-            submittedAt: new Date().toISOString(),
-          })
-        );
-      } catch (_err) {
-        // ignore
+
+    setLoading(true);
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          requestType: formData.requestType,
+          fullName: formData.name.trim(),
+          company: formData.company.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim(),
+          selectedProduct: formData.product.trim(),
+          quantity: formData.quantity,
+          kvkkAccepted: true,
+          kvkkVersion: "v1",
+          website: formData.website,
+        }),
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok || !data?.ok) {
+        setErrorMessage(data?.error || "Talebiniz kaydedilirken bir hata oluştu. Lütfen tekrar deneyin.");
+        setLoading(false);
+        return;
       }
+
+      if (typeof window !== "undefined") {
+        try {
+          sessionStorage.setItem(
+            "lastLeadSubmission",
+            JSON.stringify({
+              refCode: data.refCode,
+              product: formData.product,
+              quantity: formData.quantity,
+              name: formData.name,
+              company: formData.company,
+              email: formData.email,
+              phone: formData.phone,
+              submittedAt: new Date().toISOString(),
+            })
+          );
+        } catch (_err) {
+          // ignore
+        }
+      }
+
+      router.push("/basarili");
+    } catch (_err) {
+      setErrorMessage("Sunucuya bağlanırken bir sorun oluştu. Lütfen bağlantınızı kontrol edip tekrar deneyin.");
+      setLoading(false);
     }
-    router.push("/basarili");
   };
 
   return (
@@ -64,7 +107,53 @@ export default function LeadForm({
           Ürün Bilgi, Fiyat Teklifi & Proje Başvuru Formu
         </h2>
 
+        {errorMessage && (
+          <div className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold flex items-center gap-2">
+            <AlertCircle className="w-4 h-4 text-red-600 shrink-0" />
+            <span>{errorMessage}</span>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} className="space-y-5">
+          {/* Honeypot field (hidden from real users) */}
+          <input
+            type="text"
+            name="website"
+            value={formData.website}
+            onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+
+          {/* Talep Türü */}
+          <div>
+            <label className="text-xs font-bold text-slate-700 block mb-1.5">
+              Talep Türü *
+            </label>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {[
+                { key: "teklif", label: "Oda Teklifi" },
+                { key: "kesif", label: "Keşif Talebi" },
+                { key: "demo", label: "Oda Demosu" },
+                { key: "proje", label: "Toplu Proje" },
+              ].map((t) => (
+                <button
+                  type="button"
+                  key={t.key}
+                  onClick={() => setFormData({ ...formData, requestType: t.key })}
+                  className={`py-2 px-3 rounded-xl text-xs font-bold border transition-all ${
+                    formData.requestType === t.key
+                      ? "bg-slate-900 text-white border-slate-900 shadow-sm"
+                      : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100"
+                  }`}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Row 1: Product & Quantity */}
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
             <div className="sm:col-span-8">
@@ -179,12 +268,12 @@ export default function LeadForm({
           <div className="flex items-start gap-2.5 pt-1">
             <input
               type="checkbox"
-              id="kvkk-video"
+              id="kvkk"
               checked={formData.kvkkAccepted}
               onChange={(e) => setFormData({ ...formData, kvkkAccepted: e.target.checked })}
               className="mt-1 w-4 h-4 rounded text-amber-500 border-slate-300 focus:ring-amber-400 cursor-pointer accent-amber-500"
             />
-            <label htmlFor="kvkk-video" className="text-xs text-slate-600 select-none">
+            <label htmlFor="kvkk" className="text-xs text-slate-600 select-none">
               <button
                 type="button"
                 onClick={() => setIsKvkkModalOpen(true)}
@@ -199,10 +288,20 @@ export default function LeadForm({
           {/* Submit Button - Jabra Yellow Theme */}
           <button
             type="submit"
-            className="w-full bg-[#FFD100] hover:bg-[#E6BC00] active:scale-[0.99] text-slate-950 font-black text-sm py-4 rounded-xl transition-all shadow-lg shadow-amber-400/25 flex items-center justify-center gap-2 border border-amber-300/60"
+            disabled={loading}
+            className="w-full bg-[#FFD100] hover:bg-[#E6BC00] active:scale-[0.99] disabled:opacity-70 text-slate-950 font-black text-sm py-4 rounded-xl transition-all shadow-lg shadow-amber-400/25 flex items-center justify-center gap-2 border border-amber-300/60"
           >
-            <Send className="w-4 h-4 text-slate-950" />
-            <span>Fiyat Teklifi ve Bilgi Talebini Gönder</span>
+            {loading ? (
+              <>
+                <Loader2 className="w-4 h-4 text-slate-950 animate-spin" />
+                <span>Talebiniz İletiliyor...</span>
+              </>
+            ) : (
+              <>
+                <Send className="w-4 h-4 text-slate-950" />
+                <span>Fiyat Teklifi ve Bilgi Talebini Gönder</span>
+              </>
+            )}
           </button>
 
           <div className="flex items-center justify-center gap-2 text-[11px] text-slate-400 pt-1">
