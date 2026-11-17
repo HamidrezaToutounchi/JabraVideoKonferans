@@ -1,9 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Package, User, Building2, Mail, Phone, Send, ShieldCheck, Sparkles, Loader2, AlertCircle } from "lucide-react";
 import KvkkModal from "./KvkkModal";
+
+const TURNSTILE_SCRIPT_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+const TURNSTILE_SITE_KEY = (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "").trim();
 
 export default function LeadForm({
   defaultProduct = "Jabra PanaCast 50 Video Bar & Speak2 Paketi",
@@ -27,6 +30,118 @@ export default function LeadForm({
     website: "",
     kvkkAccepted: true,
   });
+
+  // Cloudflare Turnstile state (fail-open after 10s if script/challenge is unreachable)
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileBypass, setTurnstileBypass] = useState(!TURNSTILE_SITE_KEY);
+  const turnstileContainerRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetIdRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY) {
+      setTurnstileBypass(true);
+      return;
+    }
+
+    let isMounted = true;
+    setTurnstileToken("");
+    setTurnstileBypass(false);
+
+    // 10-second fail-open fallback so a real customer lead is never blocked
+    const fallbackTimer = setTimeout(() => {
+      if (isMounted) {
+        setTurnstileBypass(true);
+      }
+    }, 10000);
+
+    const renderWidget = () => {
+      if (!isMounted || !turnstileContainerRef.current || !(window as any).turnstile) return;
+      try {
+        if (turnstileWidgetIdRef.current !== null) {
+          (window as any).turnstile.remove(turnstileWidgetIdRef.current);
+          turnstileWidgetIdRef.current = null;
+        }
+        turnstileWidgetIdRef.current = (window as any).turnstile.render(
+          turnstileContainerRef.current,
+          {
+            sitekey: TURNSTILE_SITE_KEY,
+            action: "lead_form",
+            appearance: "interaction-only",
+            language: "tr",
+            callback: (token: string) => {
+              if (!isMounted) return;
+              clearTimeout(fallbackTimer);
+              setTurnstileToken(token || "");
+            },
+            "expired-callback": () => {
+              if (!isMounted) return;
+              setTurnstileToken("");
+            },
+            "error-callback": () => {
+              if (!isMounted) return;
+              clearTimeout(fallbackTimer);
+              setTurnstileToken("");
+              setTurnstileBypass(true);
+            },
+          }
+        );
+      } catch (_err) {
+        if (isMounted) {
+          setTurnstileBypass(true);
+        }
+      }
+    };
+
+    if ((window as any).turnstile) {
+      renderWidget();
+    } else {
+      let scriptEl = document.querySelector(`script[src="${TURNSTILE_SCRIPT_SRC}"]`) as HTMLScriptElement | null;
+      if (!scriptEl) {
+        scriptEl = document.createElement("script");
+        scriptEl.src = TURNSTILE_SCRIPT_SRC;
+        scriptEl.async = true;
+        scriptEl.defer = true;
+        document.head.appendChild(scriptEl);
+      }
+      const onLoad = () => renderWidget();
+      const onError = () => {
+        if (isMounted) {
+          clearTimeout(fallbackTimer);
+          setTurnstileBypass(true);
+        }
+      };
+      scriptEl.addEventListener("load", onLoad);
+      scriptEl.addEventListener("error", onError);
+
+      return () => {
+        isMounted = false;
+        clearTimeout(fallbackTimer);
+        scriptEl?.removeEventListener("load", onLoad);
+        scriptEl?.removeEventListener("error", onError);
+        if (turnstileWidgetIdRef.current !== null && (window as any).turnstile) {
+          try {
+            (window as any).turnstile.remove(turnstileWidgetIdRef.current);
+          } catch (_e) {
+            // ignore
+          }
+          turnstileWidgetIdRef.current = null;
+        }
+      };
+    }
+
+    return () => {
+      isMounted = false;
+      clearTimeout(fallbackTimer);
+      if (turnstileWidgetIdRef.current !== null && (window as any).turnstile) {
+        try {
+          (window as any).turnstile.remove(turnstileWidgetIdRef.current);
+        } catch (_e) {
+          // ignore
+        }
+        turnstileWidgetIdRef.current = null;
+      }
+    };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,6 +171,7 @@ export default function LeadForm({
           kvkkAccepted: true,
           kvkkVersion: "v1",
           website: formData.website,
+          ...(turnstileToken ? { turnstileToken } : {}),
         }),
       });
 
@@ -63,7 +179,6 @@ export default function LeadForm({
 
       if (!res.ok || !data?.ok) {
         setErrorMessage(data?.error || "Talebiniz kaydedilirken bir hata oluştu. Lütfen tekrar deneyin.");
-        setLoading(false);
         return;
       }
 
@@ -90,7 +205,16 @@ export default function LeadForm({
       router.push("/basarili");
     } catch (_err) {
       setErrorMessage("Sunucuya bağlanırken bir sorun oluştu. Lütfen bağlantınızı kontrol edip tekrar deneyin.");
+    } finally {
       setLoading(false);
+      if (turnstileWidgetIdRef.current !== null && (window as any).turnstile) {
+        try {
+          setTurnstileToken("");
+          (window as any).turnstile.reset(turnstileWidgetIdRef.current);
+        } catch (_e) {
+          // ignore
+        }
+      }
     }
   };
 
@@ -285,10 +409,15 @@ export default function LeadForm({
             </label>
           </div>
 
+          {/* Cloudflare Turnstile Widget Container */}
+          {TURNSTILE_SITE_KEY ? (
+            <div ref={turnstileContainerRef} className="min-h-[2px] my-1" />
+          ) : null}
+
           {/* Submit Button - Jabra Yellow Theme */}
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || !formData.kvkkAccepted || (!turnstileToken && !turnstileBypass)}
             className="w-full bg-[#FFD100] hover:bg-[#E6BC00] active:scale-[0.99] disabled:opacity-70 text-slate-950 font-black text-sm py-4 rounded-xl transition-all shadow-lg shadow-amber-400/25 flex items-center justify-center gap-2 border border-amber-300/60"
           >
             {loading ? (
